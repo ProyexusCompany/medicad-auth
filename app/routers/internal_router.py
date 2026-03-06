@@ -1,6 +1,8 @@
 """Internal API endpoints for health checks and other internal operations."""
 
-from fastapi import APIRouter
+from typing import Any
+
+from fastapi import APIRouter, status
 
 router = APIRouter(prefix="/internal", tags=["Internal"])
 
@@ -11,7 +13,15 @@ async def root() -> dict[str, str]:
     return {
         "status": "Healthy",
         "message": "App is running!",
-        # 'api': settings.PROJECT_NAME,
-        # 'version': settings.PROJECT_VERSION,
-        # # 'environment': settings.ENV,
+    }
+
+
+@router.get("/saldo/membresia", response_model=Any, status_code=status.HTTP_200_OK)
+async def consult_membership() -> dict[str, Any]:
+    """Consult membership endpoint."""
+    return {
+        "estado_membresia": 200,
+        "estado_app_renta": 300,
+        "estado_proyexus": 600,
+        "estado_hosting ": 500,
     }

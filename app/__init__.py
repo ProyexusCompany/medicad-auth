@@ -1,0 +1,1 @@
+"""Set app as module."""

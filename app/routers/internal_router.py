@@ -20,8 +20,8 @@ async def root() -> dict[str, str]:
 async def consult_membership() -> dict[str, Any]:
     """Consult membership endpoint."""
     return {
-        "estado_membresia": 200,
-        "estado_app_renta": 300,
-        "estado_proyexus": 600,
-        "estado_hosting ": 500,
+        "estado_membresia": "200",
+        "estado_app_renta": "300",
+        "estado_proyexus": "600",
+        "estado_hosting": "500",
     }

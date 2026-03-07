@@ -4,7 +4,7 @@ from typing import Any
 
 from fastapi import APIRouter, status
 
-router = APIRouter(prefix="/internal", tags=["Internal"])
+router = APIRouter(tags=["Internal"])
 
 
 @router.get("/health", response_model=None)

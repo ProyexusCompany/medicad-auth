@@ -25,4 +25,5 @@ async def consult_membership() -> dict[str, Any]:
         "estado_proyexus": "600",
         "estado_hosting": "500",
         "saldo_plan": "100",
+        "saldo_extra": "0",
     }
